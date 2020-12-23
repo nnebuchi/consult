@@ -14,7 +14,7 @@ class CreateVideoChatsTable extends Migration
     public function up()
     {
         Schema::create('video_chats', function (Blueprint $table) {
-            $table->integer('id');
+            $table->bigIncrements('id');
             $table->integer('client');
             $table->integer('consultant');
             $table->integer('status');

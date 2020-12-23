@@ -14,7 +14,7 @@ class CreateRequestTable extends Migration
     public function up()
     {
         Schema::create('request', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->integer('user_id')->nullable();
             $table->integer('gig_id')->nullable();
             $table->integer('proposed_price')->nullable();

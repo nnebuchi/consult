@@ -14,7 +14,7 @@ class CreateCertificateTypeTable extends Migration
     public function up()
     {
         Schema::create('certificate_type', function (Blueprint $table) {
-            $table->integer('id');
+            $table->bigIncrements('id');
             $table->string('type');
         });
     }

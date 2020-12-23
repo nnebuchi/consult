@@ -14,7 +14,7 @@ class CreateSiteSettingsTable extends Migration
     public function up()
     {
         Schema::create('site_settings', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->string('currency');
             $table->string('currency_symbol');
             $table->timestamp('created_at')->nullable();

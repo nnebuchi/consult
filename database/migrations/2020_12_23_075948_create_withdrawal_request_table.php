@@ -14,7 +14,7 @@ class CreateWithdrawalRequestTable extends Migration
     public function up()
     {
         Schema::create('withdrawal_request', function (Blueprint $table) {
-            $table->integer('id');
+            $table->bigIncrements('id');
             $table->integer('user_id');
             $table->decimal('amount');
             $table->string('description');

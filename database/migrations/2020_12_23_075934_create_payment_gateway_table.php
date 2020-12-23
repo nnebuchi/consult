@@ -14,7 +14,7 @@ class CreatePaymentGatewayTable extends Migration
     public function up()
     {
         Schema::create('payment_gateway', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->longText('secret_live_key');
             $table->longText('public_live_key');

@@ -14,7 +14,7 @@ class CreateConsultantsGalleriesTable extends Migration
     public function up()
     {
         Schema::create('consultants_galleries', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->string('gallery_title')->nullable();
             $table->string('slug')->nullable();

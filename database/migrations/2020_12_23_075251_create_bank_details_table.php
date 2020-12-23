@@ -14,7 +14,7 @@ class CreateBankDetailsTable extends Migration
     public function up()
     {
         Schema::create('bank_details', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->bigIncrements('id');
             $table->integer('user_id')->nullable();
             $table->integer('bank_id');
             $table->text('bank_name')->nullable();
