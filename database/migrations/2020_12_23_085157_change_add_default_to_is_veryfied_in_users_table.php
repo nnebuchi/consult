@@ -14,7 +14,7 @@ class ChangeAddDefaultToIsVeryfiedInUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->enum('is_verified', ['0','1'])->default('0')->change();
+            $table->integer('is_verified')->default('0')->change();
         });
     }
 

@@ -242,7 +242,7 @@ Route::Group(['prefix' => 'admin'], function () {
         })->name('login');
         Route::get('/register', function () {
         return view('admin.register');
-        })->name('register');
+        })->name('admin-register');
         Route::get('/forgot-password', function () {
         return view('admin.forgot-password');
         })->name('forgot-password');

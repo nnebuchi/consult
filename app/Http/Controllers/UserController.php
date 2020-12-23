@@ -17,9 +17,21 @@ class UserController extends Controller
     }
 
     public function submitEmail(Request $request){
-    	$user = new User;
-    	$user->email = $this->sanitize->sanitizeInput($request->email);
-    	$user->save();
+
+    	$check = User::where('email', $request->email)->first();
+
+    	if (is_null($check)) {
+    		$user = new User;
+	    	$user->email = $this->sanitize->sanitizeInput($request->email);
+	    	$user->is_verified = '0';
+	    	$user->user_status_id ='1';
+	    	$user->save();
+
+	    	return redirect(route('register'))->with('success', 'check your mail for your verification link');
+    	}else{
+    		return redirect(route('register'))->with('error', 'this email already exists');
+    	}
+    	
 
 
     }
