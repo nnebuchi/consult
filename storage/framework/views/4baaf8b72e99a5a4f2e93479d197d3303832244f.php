@@ -272,4 +272,6 @@
 					</ul>
 				</nav>
 			</header>
-			<!-- /Header --><?php /**PATH C:\xampp\htdocs\consult\resources\views/layout/partials/header.blade.php ENDPATH**/ ?>
+			<!-- /Header -->
+
+			<?php echo $__env->make('layout.shared.alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>;<?php /**PATH C:\xampp\htdocs\consult\resources\views/layout/partials/header.blade.php ENDPATH**/ ?>

@@ -25,6 +25,7 @@
 </html>
 <script>
 $(document).ready(function(){
+  
   // alert(1);
  /*$('.submenu li a').click(function(){
    $(.submenu li a).removeClass("active");

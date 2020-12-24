@@ -37,6 +37,18 @@ Route::get('/register', function () {
 
 Route::post('sumbit-email', 'UserController@submitEmail')->name('sumbit-email');
 
+Route::get('verify-email/{email}/{token}', 'UserController@verifyEmail')->name('verify-email');
+
+Route::get('complete-registration', 'UserController@completeRegistration')->name('complete-registration');
+
+// Route::group(['middleware' => ['web']], function () {
+
+    Route::post('complete-signup', 'UserController@completeSignup')->name('complete-signup');
+
+// });
+
+
+
 
 Route::get('/forgot-password', function () {
     return view('forgot-password');
@@ -237,9 +249,9 @@ Route::Group(['prefix' => 'admin'], function () {
         Route::get('/profile', function () {
         return view('admin.profile');
         })->name('profile');
-        Route::get('/login', function () {
+        Route::get('admin/login', function () {
         return view('admin.login');
-        })->name('login');
+        })->name('admin-login');
         Route::get('/register', function () {
         return view('admin.register');
         })->name('admin-register');

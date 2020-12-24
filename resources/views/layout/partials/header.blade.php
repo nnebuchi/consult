@@ -273,3 +273,5 @@
 				</nav>
 			</header>
 			<!-- /Header -->
+
+			@include('layout.shared.alert');
